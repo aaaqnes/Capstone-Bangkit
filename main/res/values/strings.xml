@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">login</string>
+    <string name="dufan">Dunia Fantasi</string>
+    <string name="tmii">Taman Mini Indonesia Indah</string>
+    <string name="monas">Monumen Nasional</string>
+    <string name="moja">Moja Museum</string>
+    <string name="grup">background</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="visit_the_best_location_today">Visit the best location today</string>
+    <string name="recommendation_for_today_s_weather">Recommendation for Today\'s Weather</string>
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".listreco">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="39dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="283dp"
+        android:layout_height="66dp"
+        android:fontFamily="@font/poppinsbold"
+        android:gravity="center"
+        android:text="@string/recommendation_for_today_s_weather"
+        android:textSize="22dp"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="20dp" />
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="643dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="87dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

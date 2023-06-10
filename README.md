@@ -4,7 +4,7 @@ Explore the World, Your Way! <br />
 <br />
 Team ID : B21-: C23-PS035 <br />
 Team Members <br />
-1.(ML) M013DSX1757 – Muhamad Daffa Nur Sejati – IPB University - [Active] <br />
+1. (ML) M013DSX1757 – Muhamad Daffa Nur Sejati – IPB University - [Active] <br />
 2. (ML) M013DSY1750 – Aqnes Theodora Tebi – IPB University - [Active] <br />
 3. (ML) M013DSX1461 – Ihsan Maulana Ilmi – IPB University - [Active] <br />
 4. (CC) C181DSY3671 - Frisca Cindy Az-Zahra – University of Indonesia - [Active] <br />

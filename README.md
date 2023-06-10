@@ -1,5 +1,5 @@
 # Capstone-Bangkit 
-Berwisata, Bangkit 2023 Final Capstone Project
+# Berwisata Bangkit 2023 Final Capstone Project
 An application to make your entertainment more enjoyable
 
 Team ID : B21-: C23-PS035

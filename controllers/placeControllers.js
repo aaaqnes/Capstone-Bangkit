@@ -8,11 +8,11 @@ const addPlace = async (req, res) => {
         const places = await firestore.collection('place').doc(place_id);
         const doc = await places.get();
         if(doc.exists) {
-            res.status(400).send('Place with the same ID saved before!')
+            res.status(400).send('Place Data with the same ID has been saved before!!')
         } else { 
             const place_data = req.body;
             await places.set(place_data);
-            res.send('Place saved successful');
+            res.send('Place data saved successfully');
         }
     } catch (error) {
         res.status(400).send(error.message);
@@ -25,7 +25,7 @@ const getAllPlace = async (req, res) => {
         const data = await places.get();
         const placesArray = [];
         if(data.empty) {
-            res.status(404).send('No Places Data Found');
+            res.status(404).send('Place Data not found!');
         } else {
             data.forEach(doc => {
                 const place = new Place(
@@ -49,7 +49,7 @@ const getPlaceByID = async (req, res) => {
         const place = await firestore.collection('place').doc(place_id);
         const data = await place.get();
         if(!data.exists) {
-            res.status(404).send('Place with the given ID not found');
+            res.status(404).send('Place data with the given ID was not found');
         }else {
             res.send(data.data());
         }
@@ -64,7 +64,7 @@ const updatePlace = async (req, res,) => {
         const data = req.body;
         const place =  await firestore.collection('place').doc(place_id);
         await place.update(data);
-        res.send('Place data updated successful');        
+        res.send('Place data updated successfully');        
     } catch (error) {
         res.status(400).send(error.message);
     }
@@ -74,7 +74,7 @@ const deletePlace = async (req, res,) => {
     try {
         const place_id = req.params.place_id;
         await firestore.collection('place').doc(place_id).delete();
-        res.send('Place data deleted successful');
+        res.send('Place data deleted successfully');
     } catch (error) {
         res.status(400).send(error.message);
     }

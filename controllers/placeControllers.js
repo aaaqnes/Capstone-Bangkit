@@ -4,10 +4,16 @@ const firestore = admin.firestore();
 
 const addPlace = async (req, res) => {
     try {
-        const data = req.body;
-        const id = req.body.place_id;
-        await firestore.collection('place').doc(id).set(data);
-        res.send('Place saved successful');
+        const place_id = req.body.place_id;
+        const places = await firestore.collection('place').doc(place_id);
+        const doc = await places.get();
+        if(doc.exists) {
+            res.status(400).send('Place with the same ID saved before!')
+        } else { 
+            const place_data = req.body;
+            await places.set(place_data);
+            res.send('Place saved successful');
+        }
     } catch (error) {
         res.status(400).send(error.message);
     }

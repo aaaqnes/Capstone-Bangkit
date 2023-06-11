@@ -10,11 +10,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(PlaceRoutes);
-app.post('/post-test', (req, res) => {
-    console.log('Got body:', req.body);
-    res.sendStatus(200);
-});
+app.use('/api', PlaceRoutes);
 
 
 const PORT = process.env.PORT || 5000

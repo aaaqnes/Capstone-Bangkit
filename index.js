@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const PlaceRoutes = require("./routes/placeRoutes");
+const ItineraryRoutes = require('./routes/itineraryRoutes');
+const ModelRoutes = require('./routes/modelRoutes')
 
 const app = express();
 
@@ -11,7 +13,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/api', PlaceRoutes);
-
+app.use('/api', ItineraryRoutes);
+app.use('/api', ModelRoutes);
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {

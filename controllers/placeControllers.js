@@ -1,5 +1,5 @@
 const admin = require("../config/firebase");
-const Place = require("../models/placeModels");
+const Place = require("../models/placeModel");
 const firestore = admin.firestore();
 
 const addPlace = async (req, res) => {
@@ -28,13 +28,14 @@ const getAllPlace = async (req, res) => {
             res.status(404).send('Place Data not found!');
         } else {
             data.forEach(doc => {
-                const place = new Place(
+                const places = new Place(
                     doc.data().place_id,
                     doc.data().place_name,
                     doc.data().place_loc,
-                    doc.data().place_desc
+                    doc.data().place_desc,
+                    doc.data().place_imgurl
                 );
-                placesArray.push(place);
+                placesArray.push(places);
             });
             res.send(placesArray);
         }
@@ -64,7 +65,6 @@ const getPlaceByLocJakpus = async (req, res) => {
         const data = await place.get();
         const placesArray = [];
         if(data.empty) {
-            console.log(data)
             res.status(404).send('Place Data with the given location not found!');
         } else {
             data.forEach(doc => {
@@ -72,7 +72,8 @@ const getPlaceByLocJakpus = async (req, res) => {
                     doc.data().place_id,
                     doc.data().place_name,
                     doc.data().place_loc,
-                    doc.data().place_desc
+                    doc.data().place_desc,
+                    doc.data().place_imgurl
                 );
                 placesArray.push(places);
             });
@@ -97,7 +98,8 @@ const getPlaceByLocJakut = async (req, res) => {
                     doc.data().place_id,
                     doc.data().place_name,
                     doc.data().place_loc,
-                    doc.data().place_desc
+                    doc.data().place_desc,
+                    doc.data().place_imgurl
                 );
                 placesArray.push(places);
             });
@@ -122,7 +124,8 @@ const getPlaceByLocJakbar = async (req, res) => {
                     doc.data().place_id,
                     doc.data().place_name,
                     doc.data().place_loc,
-                    doc.data().place_desc
+                    doc.data().place_desc,
+                    doc.data().place_imgurl,
                 );
                 placesArray.push(places);
             });
@@ -147,7 +150,8 @@ const getPlaceByLocJaktim = async (req, res) => {
                     doc.data().place_id,
                     doc.data().place_name,
                     doc.data().place_loc,
-                    doc.data().place_desc
+                    doc.data().place_desc,
+                    doc.data().place_imgurl,
                 );
                 placesArray.push(places);
             });
@@ -172,7 +176,8 @@ const getPlaceByLocJaksel = async (req, res) => {
                     doc.data().place_id,
                     doc.data().place_name,
                     doc.data().place_loc,
-                    doc.data().place_desc
+                    doc.data().place_desc,
+                    doc.data().place_imgurl,
                 );
                 placesArray.push(places);
             });

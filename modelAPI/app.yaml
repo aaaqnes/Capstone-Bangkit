@@ -1,6 +1,2 @@
 runtime: python39
 service: modelapi
-
-handlers:
-- url: /.*
-  script: auto

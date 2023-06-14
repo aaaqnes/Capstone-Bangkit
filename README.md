@@ -1,5 +1,5 @@
 # Capstone Bangkit 2023 Final Capstone Project
-KELANA <br />
+BERWISATA <br />
 Explore the World, Your Way! <br />
 <br />
 Team ID : B21-: C23-PS035 <br />

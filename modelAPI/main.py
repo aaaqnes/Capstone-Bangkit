@@ -30,7 +30,7 @@ weather_mapping = {'clear': 'sunny', 'clouds': 'sunny', 'haze': 'sunny', 'rain':
 # Create the Flask app
 app = Flask(__name__)
 
-@app.route('/recommend', methods=['POST'])
+@app.route('/weather', methods=['POST'])
 def recommend_attractions():
     # Get user input from the request
     user_data = request.get_json()

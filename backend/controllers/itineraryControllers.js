@@ -10,7 +10,7 @@ const createItinerary =  async (req, res) => {
         const uid = decodedToken.uid;
         const itinerary_name = req.body.itinerary_name;
         const docName = uid + itinerary_name
-        const docRef = await firestore.collection('itinerary').doc(docName);
+        const docRef = firestore.collection('itinerary').doc(docName);
         const doc = await docRef.get();
 
         if(doc.exists) {

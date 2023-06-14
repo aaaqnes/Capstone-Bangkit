@@ -5,7 +5,7 @@ const firestore = admin.firestore();
 const addPlace = async (req, res) => {
     try {
         const place_id = req.body.place_id;
-        const places = await firestore.collection('place').doc(place_id);
+        const places = firestore.collection('place').doc(place_id);
         const doc = await places.get();
         if(doc.exists) {
             res.status(400).send('Place Data with the same ID has been saved before!')
@@ -21,7 +21,7 @@ const addPlace = async (req, res) => {
 
 const getAllPlace = async (req, res) => {
     try {
-        const places = await firestore.collection('place');
+        const places = firestore.collection('place');
         const data = await places.get();
         const placesArray = [];
         if(data.empty) {
@@ -47,7 +47,7 @@ const getAllPlace = async (req, res) => {
 const getPlaceByID = async (req, res) => {
     try {
         const place_id = req.params.place_id;
-        const place = await firestore.collection('place').doc(place_id);
+        const place = firestore.collection('place').doc(place_id);
         const data = await place.get();
         if(!data.exists) {
             res.status(404).send('Place data with the given ID was not found');
@@ -61,7 +61,7 @@ const getPlaceByID = async (req, res) => {
 
 const getPlaceByLocJakpus = async (req, res) => {
     try {
-        const place = await firestore.collection('place').where('place_loc', '>=', 'Jakarta Pusat');
+        const place = firestore.collection('place').where('place_loc', '>=', 'Jakarta Pusat');
         const data = await place.get();
         const placesArray = [];
         if(data.empty) {
@@ -86,7 +86,7 @@ const getPlaceByLocJakpus = async (req, res) => {
 
 const getPlaceByLocJakut = async (req, res) => {
     try {
-        const place = await firestore.collection('place').where('place_loc', '>=', 'Jakarta Utara');
+        const place = firestore.collection('place').where('place_loc', '>=', 'Jakarta Utara');
         const data = await place.get();
         const placesArray = [];
         if(data.empty) {
@@ -112,7 +112,7 @@ const getPlaceByLocJakut = async (req, res) => {
 
 const getPlaceByLocJakbar = async (req, res) => {
     try {
-        const place = await firestore.collection('place').where('place_loc', '>=', 'Jakarta Barat');
+        const place = firestore.collection('place').where('place_loc', '>=', 'Jakarta Barat');
         const data = await place.get();
         const placesArray = [];
         if(data.empty) {
@@ -138,7 +138,7 @@ const getPlaceByLocJakbar = async (req, res) => {
 
 const getPlaceByLocJaktim = async (req, res) => {
     try {
-        const place = await firestore.collection('place').where('place_loc', '>=', 'Jakarta Timur');
+        const place = firestore.collection('place').where('place_loc', '>=', 'Jakarta Timur');
         const data = await place.get();
         const placesArray = [];
         if(data.empty) {
@@ -164,7 +164,7 @@ const getPlaceByLocJaktim = async (req, res) => {
 
 const getPlaceByLocJaksel = async (req, res) => {
     try {
-        const place = await firestore.collection('place').where('place_loc', '>=', 'Jakarta Selatan');
+        const place = firestore.collection('place').where('place_loc', '>=', 'Jakarta Selatan');
         const data = await place.get();
         const placesArray = [];
         if(data.empty) {
@@ -192,7 +192,7 @@ const updatePlace = async (req, res,) => {
     try {
         const place_id = req.params.place_id;
         const data = req.body;
-        const place =  await firestore.collection('place').doc(place_id);
+        const place =  firestore.collection('place').doc(place_id);
         await place.update(data);
         res.send('Place data updated successfully');        
     } catch (error) {

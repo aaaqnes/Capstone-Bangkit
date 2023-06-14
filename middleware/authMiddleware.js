@@ -1,8 +1,8 @@
 const admin = require('../config/firebase');
 
 const isAuthenticated = (req, res, next) => {
-    const token = admin.auth().currentUser.getIdToken();
-  
+    const token = req.headers.authorization;
+
     if (!token) {
       res.status(401).json({ error: 'Unauthorized' });
     } else {

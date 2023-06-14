@@ -1,5 +1,5 @@
 runtime: python39
-service: modelAPI
+service: modelapi
 
 handlers:
 - url: /.*

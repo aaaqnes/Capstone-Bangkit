@@ -5,10 +5,8 @@ import pandas as pd
 import requests
 from sklearn.preprocessing import LabelEncoder
 
-# Load the pretrained model
 model = tf.keras.models.load_model('model.h5')
 
-# Load the data and perform necessary preprocessing
 data = pd.read_csv('dataset.csv')
 data['Weather'] = data['Weather'].str.strip()
 weather_mapping = {'Sunny': 0, 'Rain': 1}
@@ -27,12 +25,10 @@ city_coordinates = {
 }
 weather_mapping = {'clear': 'sunny', 'clouds': 'sunny', 'haze': 'sunny', 'rain': 'rain', 'drizzle': 'rain', 'thunderstorm': 'rain', 'squall': 'rain'}
 
-# Create the Flask app
 app = Flask(__name__)
 
 @app.route('/weather', methods=['POST'])
 def recommend_attractions():
-    # Get user input from the request
     user_data = request.get_json()
     user_city = user_data['user_city']
     user_lat = city_coordinates[user_city]["lat"]
@@ -45,20 +41,17 @@ def recommend_attractions():
     user_weather_encoded = [int(user_weather.lower() == category) for category in ['sunny', 'rain']]
     user_weather_encoded = np.array([[user_weather_encoded]])
     
-    # Preprocess the user input
     city_filter = data['City_1'] == label_encoder.transform([user_city])[0]
     filtered_X = X[city_filter]
     filtered_y = y[city_filter]
     filtered_label_encoder = LabelEncoder()
     filtered_y_encoded = filtered_label_encoder.fit_transform(filtered_y)
 
-    # Make predictions using the pretrained model
     user_weather_encoded = np.reshape(user_weather_encoded, (1, -1))
     predicted_probabilities = model.predict(user_weather_encoded)
     top_5_indices = np.argsort(predicted_probabilities[0])[-5:][::-1]
     recommended_attractions = filtered_label_encoder.inverse_transform(top_5_indices)
     
-    # Return the recommended attractions as the API response
     response_data = {
         'city': user_city,
         'weather': weather_description,

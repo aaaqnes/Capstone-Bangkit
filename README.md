@@ -5,8 +5,9 @@ Tourist Attractions Prediction is used to predict which tourist attractions can 
 Users only need to enter a location and recommendations for places based on that day will appear
 
 # Modelling
-![image]
-(https://github.com/aaaqnes/Capstone-Bangkit/assets/70590066/3da8cdb2-9f32-49d8-9208-baf9c1d03801)
+![image](https://github.com/aaaqnes/Capstone-Bangkit/assets/70590066/3da8cdb2-9f32-49d8-9208-baf9c1d03801)
+
+
 The data we use is from Kaggle titled "Indonesia Tourism Destination" which consists of 450 data points. 
 In our model, we employ a classification technique to determine the best places to visit based on weather and city.
 The working principle of our model is as follows:

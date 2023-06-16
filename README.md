@@ -2,6 +2,8 @@
 BERWISATA <br />
 Explore the World, Your Way! <br />
 <br />
+![image](https://github.com/aaaqnes/Capstone-Bangkit/assets/70590066/6fe0363b-f394-4ecf-ada2-274fb31ad519)<br />
+
 Team ID : B21-: C23-PS035 <br />
 Team Members <br />
 1. (ML) M013DSX1757 – Muhamad Daffa Nur Sejati – IPB University - [Active] <br />

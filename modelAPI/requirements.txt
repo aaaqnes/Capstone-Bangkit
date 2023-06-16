@@ -1,7 +1,6 @@
-Flask
+flask
 tensorflow
 numpy
 pandas
 requests
 scikit-learn
-gunicorn

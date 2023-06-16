@@ -61,7 +61,7 @@ const getPlaceByID = async (req, res) => {
 
 const getPlaceByLocJakpus = async (req, res) => {
     try {
-        const place = firestore.collection('place').where('place_loc', '>=', 'Jakarta Pusat');
+        const place = firestore.collection('place').where('place_loc', '==', 'Jakarta Pusat');
         const data = await place.get();
         const placesArray = [];
         if(data.empty) {
@@ -86,7 +86,7 @@ const getPlaceByLocJakpus = async (req, res) => {
 
 const getPlaceByLocJakut = async (req, res) => {
     try {
-        const place = firestore.collection('place').where('place_loc', '>=', 'Jakarta Utara');
+        const place = firestore.collection('place').where('place_loc', '==', 'Jakarta Utara');
         const data = await place.get();
         const placesArray = [];
         if(data.empty) {
@@ -112,7 +112,7 @@ const getPlaceByLocJakut = async (req, res) => {
 
 const getPlaceByLocJakbar = async (req, res) => {
     try {
-        const place = firestore.collection('place').where('place_loc', '>=', 'Jakarta Barat');
+        const place = firestore.collection('place').where('place_loc', '==', 'Jakarta Barat');
         const data = await place.get();
         const placesArray = [];
         if(data.empty) {
@@ -138,7 +138,7 @@ const getPlaceByLocJakbar = async (req, res) => {
 
 const getPlaceByLocJaktim = async (req, res) => {
     try {
-        const place = firestore.collection('place').where('place_loc', '>=', 'Jakarta Timur');
+        const place = firestore.collection('place').where('place_loc', '==', 'Jakarta Timur');
         const data = await place.get();
         const placesArray = [];
         if(data.empty) {
@@ -164,7 +164,7 @@ const getPlaceByLocJaktim = async (req, res) => {
 
 const getPlaceByLocJaksel = async (req, res) => {
     try {
-        const place = firestore.collection('place').where('place_loc', '>=', 'Jakarta Selatan');
+        const place = firestore.collection('place').where('place_loc', '==', 'Jakarta Selatan');
         const data = await place.get();
         const placesArray = [];
         if(data.empty) {

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "889273065208",
+    "firebase_url": "https://caps-bangkit-c23-ps035-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "caps-bangkit-c23-ps035",
+    "storage_bucket": "caps-bangkit-c23-ps035.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889273065208:android:bb475cf40e649dda34650d",
+        "android_client_info": {
+          "package_name": "com.berwisata.travel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889273065208-i19545od4h7n85dosjgsq9lr3scfonui.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.berwisata.travel",
+            "certificate_hash": "e393833e5a8b5fe8a50074142b76995eb7bec0b3"
+          }
+        },
+        {
+          "client_id": "889273065208-rjnbolu39c2j2nidsdtbtsng9osgtfee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmLfRrwFux4U9pwUCRit6QbbAywiBAcYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889273065208-rjnbolu39c2j2nidsdtbtsng9osgtfee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

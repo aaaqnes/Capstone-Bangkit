@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bot_nav_navigation"
+    app:startDestination="@id/menu_home">
+
+    <fragment
+        android:id="@+id/menu_home"
+        android:name="com.berwisata.travel.presentation.fragment.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/menu_itinerary"
+        android:name="com.berwisata.travel.presentation.fragment.ItineraryFragment"
+        android:label="Itinerary"
+        tools:layout="@layout/fragment_itinerary" />
+    <fragment
+        android:id="@+id/menu_profile"
+        android:name="com.berwisata.travel.presentation.fragment.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
